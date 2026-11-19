@@ -330,4 +330,5 @@ shape = SubResource("RectangleShape2D_xrivr")
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_13qdw")
 animation = &"SideRun"
-frame_progress = 0.1587298
+frame = 1
+frame_progress = 0.6136252
