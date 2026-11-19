@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bqqbvpwv6fkrt" path="res://player/player.tscn" id="1_vfa6b"]
 [ext_resource type="Texture2D" uid="uid://b6erf5vrrnyfu" path="res://levels/level_1/Groundtilemap.png" id="2_45440"]
+[ext_resource type="PackedScene" uid="uid://d2roi78gpbspu" path="res://Enemy/Dog.tscn" id="2_iey7c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epb64"]
 texture = ExtResource("2_45440")
@@ -20,6 +21,9 @@ sources/2 = SubResource("TileSetAtlasSource_epb64")
 [node name="level_1" type="Node2D" unique_id=1610643571]
 
 [node name="Player" parent="." unique_id=1279126052 instance=ExtResource("1_vfa6b")]
+
+[node name="Dog" parent="." unique_id=1733643333 instance=ExtResource("2_iey7c")]
+position = Vector2(164, -349)
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=882326163]
 scale = Vector2(0.2, 0.2)
