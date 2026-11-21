@@ -23,7 +23,7 @@ sources/2 = SubResource("TileSetAtlasSource_epb64")
 [node name="Player" parent="." unique_id=1279126052 instance=ExtResource("1_vfa6b")]
 
 [node name="Dog" parent="." unique_id=1733643333 instance=ExtResource("2_iey7c")]
-position = Vector2(164, -349)
+position = Vector2(477, 243)
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=882326163]
 scale = Vector2(0.2, 0.2)

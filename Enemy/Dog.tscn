@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://d2roi78gpbspu"]
 
 [ext_resource type="Texture2D" uid="uid://crmya0emmlhak" path="res://levels/level_1/DogSpriteSheet.png" id="1_53lc0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+[ext_resource type="Script" uid="uid://dm20nit1rxxwo" path="res://Enemy/dogMovement.gd" id="1_gfspa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfspa"]
 atlas = ExtResource("1_53lc0")
@@ -319,16 +318,22 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(113.5, 105.5)
+
 [node name="Dog" type="Node2D" unique_id=1733643333]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1160874776]
+[node name="Dog" type="CharacterBody2D" parent="." unique_id=1160874776]
+script = ExtResource("1_gfspa")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=683689958]
-shape = SubResource("RectangleShape2D_xrivr")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=525379410]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dog" unique_id=525379410]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_13qdw")
-animation = &"SideRun"
-frame = 1
-frame_progress = 0.6136252
+animation = &"SideIdle"
+autoplay = "FrontIdle"
+frame_progress = 0.079723254
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dog" unique_id=683689958]
+visible = false
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_xrivr")
